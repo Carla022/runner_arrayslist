@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -75,14 +76,43 @@ public class Runner {
 
 
 //        2. Print the difference between the largest and smallest value (smallest = 1, largest = 99)
-//        int[] arrayNumbers1 = {1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7};
+        System.out.println(numbers);
 
+//        Smallest element in array:
+        int min = arrayNumbers[0];
+        for(int i=0;i<arrayNumbers.length;i++){
+            if(arrayNumbers[i]<min)
+                min = arrayNumbers[i];
+        }
+        System.out.println("Smallest element present in given array:" + min);
+
+//        Largest element in array:
+
+        int max = arrayNumbers[0];
+        for(int i=0;i<arrayNumbers.length;i++){
+            if(arrayNumbers[i]>max)
+                max = arrayNumbers[i];
+        }
+        System.out.println("Largest element present in given array:" + max);
+
+//        Difference
+        int max_val = arrayNumbers[0];
+        int min_val = arrayNumbers[0];
+        for(int i = 1; i < arrayNumbers.length; i++) {
+            if (arrayNumbers[i] > max_val)
+                max_val = arrayNumbers[i];
+            else if (arrayNumbers[i] < min_val)
+                min_val = arrayNumbers[i];
+
+        }
+        System.out.println("Difference between the largest and smallest values of the said array: "+(max_val-min_val));
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
+
         boolean NumIsNext = true;
         boolean NumNotNext = false;
         System.out.println(NumIsNext);
         System.out.println(NumNotNext);
-
+ 
 //    To be continued...
 
 //
